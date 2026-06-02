@@ -1,0 +1,29 @@
+{
+  "appId": "com.yourcompany.vow",
+  "appName": "Vow",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon_config_sample",
+      "iconColor": "#3B8E5E",
+      "sound": "beep.wav"
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#1A1A1C"
+    }
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "allowsLinkPreview": false,
+    "scrollEnabled": true,
+    "backgroundColor": "#1A1A1C"
+  },
+  "android": {
+    "backgroundColor": "#1A1A1C",
+    "allowMixedContent": false
+  }
+}
