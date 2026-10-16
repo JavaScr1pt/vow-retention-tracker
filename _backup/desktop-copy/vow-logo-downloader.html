@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Vow Logo Downloader</title>
+<style>body{font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#1A1A1C;color:#fff;gap:20px;}
+img{width:200px;height:200px;border-radius:44px;box-shadow:0 8px 40px rgba(59,142,94,.4);}
+button{padding:12px 28px;border:none;border-radius:12px;background:#3B8E5E;color:#fff;font-size:16px;font-weight:700;cursor:pointer;margin:6px;}
+button:hover{background:#2d7048;}</style>
+</head>
+<body>
+<img id="logo" src="https://d8j0ntlcm91z4.cloudfront.net/user_3ESU254qxp3hEInSAJAeAxyT0gf/hf_20260602_051711_e675f2fd-97e7-4d92-962b-ca3d13be3acb.png" crossorigin="anonymous" alt="Vow Logo">
+<div>
+  <button onclick="dl('png')">Download PNG</button>
+  <button onclick="dl('jpg')">Download JPEG</button>
+</div>
+<p id="status" style="opacity:.6;font-size:14px;">Open this file in your browser to download the logo.</p>
+<script>
+async function dl(fmt){
+  const status = document.getElementById('status');
+  status.textContent = 'Fetching…';
+  try {
+    const res = await fetch(document.getElementById('logo').src);
+    const blob = await res.blob();
+    if(fmt==='jpg'){
+      const bmp = await createImageBitmap(blob);
+      const c = document.createElement('canvas');
+      c.width=bmp.width; c.height=bmp.height;
+      const ctx=c.getContext('2d');
+      ctx.drawImage(bmp,0,0);
+      c.toBlob(b=>{save(b,'vow-logo.jpg');},'image/jpeg',0.92);
+    } else {
+      save(blob,'vow-logo.png');
+    }
+    status.textContent = fmt.toUpperCase()+' download started!';
+  } catch(e){ status.textContent = 'Error: '+e.message; }
+}
+function save(blob, name){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=name;
+  a.click();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg width="1024" height="1024" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="680" height="680" rx="150" fill="#1A1A1C"/>
+  <circle cx="340" cy="300" r="230" fill="none" stroke="#2a2a2e" stroke-width="10"/>
+  <circle cx="340" cy="300" r="230" fill="none" stroke="#3B8E5E" stroke-width="10"
+    stroke-dasharray="1445" stroke-dashoffset="289"
+    stroke-linecap="round"
+    transform="rotate(-90 340 300)"/>
+  <ellipse cx="340" cy="292" rx="92" ry="108" fill="#3B8E5E" opacity="0.12"/>
+  <path d="M282 430 C258 378 232 270 278 200 C298 170 322 158 340 152
+            C340 152 340 258 322 318 C310 360 296 398 282 430 Z"
+        fill="#3B8E5E" opacity="0.95"/>
+  <path d="M398 430 C422 378 448 270 402 200 C382 170 358 158 340 152
+            C340 152 340 258 358 318 C370 360 384 398 398 430 Z"
+        fill="#4BAE72" opacity="0.95"/>
+  <line x1="340" y1="426" x2="340" y2="468" stroke="#3B8E5E" stroke-width="6" stroke-linecap="round"/>
+  <text x="340" y="574" text-anchor="middle"
+        font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif"
+        font-size="88" font-weight="800" fill="#FFFFFF" letter-spacing="18">VOW</text>
+  <text x="340" y="622" text-anchor="middle"
+        font-family="'SF Pro Text','Helvetica Neue',Arial,sans-serif"
+        font-size="22" font-weight="400" fill="#3B8E5E" letter-spacing="7">STAY THE COURSE</text>
+</svg>

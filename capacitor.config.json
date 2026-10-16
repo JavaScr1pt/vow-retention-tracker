@@ -1,15 +1,13 @@
 {
   "appId": "com.yourcompany.vow",
   "appName": "Vow",
-  "webDir": "www",
+  "webDir": "dist",
   "server": {
     "androidScheme": "https"
   },
   "plugins": {
     "LocalNotifications": {
-      "smallIcon": "ic_stat_icon_config_sample",
-      "iconColor": "#3B8E5E",
-      "sound": "beep.wav"
+      "iconColor": "#3B8E5E"
     },
     "StatusBar": {
       "style": "DARK",
