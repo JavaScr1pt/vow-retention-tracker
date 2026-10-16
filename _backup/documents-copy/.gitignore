@@ -1,0 +1,10 @@
+node_modules/
+www/
+ios/
+android/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+dist/
+.env

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <title>Vow — Retention Tracker</title>
+  <meta name="description" content="Vow: a private, gamified daily streak tracker.">
+  <meta name="theme-color" content="#1A1A1C">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Vow">
+  <link rel="icon" type="image/svg+xml" href="icons/vow-logo.svg">
+  <link rel="apple-touch-icon" href="icons/vow-logo.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script>
+    // Apply the saved theme before first paint to avoid a light/dark flash.
+    // Kept inline on purpose; the full theme logic lives in src/ui/theme.js.
+    (function () {
+      try {
+        var t = localStorage.getItem('vow_theme') || 'dark';
+        var dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) { /* storage blocked: keep the dark default */ }
+    })();
+  </script>
+</head>
+<body>
+  <noscript>Vow needs JavaScript enabled to run.</noscript>
+  <div id="root">
+    <div class="boot-splash" role="status" aria-live="polite">
+      <img src="icons/vow-logo.svg" alt="" width="72" height="72">
+      <span>Loading Vow…</span>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

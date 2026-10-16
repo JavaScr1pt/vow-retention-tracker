@@ -1,0 +1,14 @@
+{
+  "name": "Vow — Retention Tracker",
+  "short_name": "Vow",
+  "description": "A private, gamified daily streak tracker.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1A1A1C",
+  "theme_color": "#1A1A1C",
+  "icons": [
+    { "src": "icons/vow-logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

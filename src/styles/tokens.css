@@ -1,0 +1,53 @@
+/* Design tokens. Light is the base; [data-theme="dark"] overrides. */
+:root {
+  --bg: #F7F5F0;
+  --card: #FFFFFF;
+  --accent: #3B8E5E;
+  --accent-strong: #2A7048;
+  --accent-light: rgba(59, 142, 94, 0.12);
+  --accent-border: rgba(59, 142, 94, 0.25);
+  --relapse: #C9645A;
+  --relapse-light: rgba(217, 119, 109, 0.12);
+  --relapse-border: rgba(217, 119, 109, 0.3);
+  --gold: #A87A0E;
+  --gold-light: rgba(200, 150, 27, 0.12);
+  --xp: #7C5CBF;
+  --xp-light: rgba(124, 92, 191, 0.12);
+  --ice: #3F87B8;
+  --ice-light: rgba(100, 180, 255, 0.12);
+  --ice-border: rgba(100, 180, 255, 0.35);
+  --text-primary: #2C2C2E;
+  --text-secondary: #5F5F63;
+  --text-tertiary: #8E8E93;
+  --border: rgba(44, 44, 46, 0.1);
+  --shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --focus: 0 0 0 3px rgba(59, 142, 94, 0.45);
+  --radius: 16px;
+  --radius-sm: 12px;
+  --font: -apple-system, "SF Pro Text", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --app-width: 430px;
+  --nav-height: 60px;
+  --gradient-accent: linear-gradient(135deg, #3B8E5E, #2A7048);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #1A1A1C;
+  --card: #2C2C2E;
+  --relapse: #E0867C;
+  --gold: #D9A93A;
+  --ice: #6BB3E3;
+  --text-primary: #F2F2F7;
+  --text-secondary: #AEAEB2;
+  --text-tertiary: #8A8A8F;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --accent-light: rgba(59, 142, 94, 0.18);
+  --relapse-light: rgba(217, 119, 109, 0.18);
+  --gold-light: rgba(200, 150, 27, 0.18);
+  --xp-light: rgba(124, 92, 191, 0.2);
+  --ice-light: rgba(100, 180, 255, 0.12);
+  color-scheme: dark;
+}
